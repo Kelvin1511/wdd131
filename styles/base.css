@@ -1,0 +1,108 @@
+/* Color variables to ensure good contrast (AA Level) */
+:root {
+    --primary-color: #003366;
+    --bg-color: #f4f6f8;
+    --text-color: #333333;
+    --hover-bg: #e6f0fa;
+    --hover-text: #003366;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 0;
+}
+
+#course-title {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Navigation - Flexbox */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Required hover effect (no visual layout shifts) */
+nav a:hover {
+    background-color: var(--hover-bg);
+    color: var(--hover-text);
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 30px auto; /* Horizontal centering */
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+/* Cards - CSS Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+}
