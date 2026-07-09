@@ -1,0 +1,35 @@
+/* Media query rules for large layouts (>= 600px) */
+
+#menu-button {
+    display: none; /* Hide the hamburger icon on desktop screens */
+}
+
+header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+header span {
+    margin-bottom: 0;
+}
+
+nav {
+    display: block !important;
+    width: auto;
+}
+
+nav ul {
+    flex-direction: row; /* Horizontal Flex layout for navigation links */
+    gap: 15px;
+}
+
+nav a {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+/* Automatically calculates responsive column layouts on wider viewports */
+.gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}

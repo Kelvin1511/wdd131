@@ -1,0 +1,135 @@
+:root {
+    --primary-color: #0d3b66;
+    --secondary-color: #f4d35e;
+    --text-color: #111111;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
+/* Header layout using vertical Flexbox for mobile view */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+header span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+#menu-button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+/* Hidden by default on mobile for the hamburger toggle functionality */
+nav {
+    display: none; 
+    width: 100%;
+}
+
+nav.open {
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+}
+
+nav a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.75rem;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover dynamic effects */
+nav a:hover, nav a.active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Horizontally centered main content wrapper */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Responsive grid layout (1 column on mobile view) */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1.5rem; 
+}
+
+figure {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Keeps image proportions clean and uniform */
+    display: block;
+}
+
+figcaption {
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: bold;
+}
+
+/* Footer layout matching last week's homepage requirements */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+#lastModified {
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+}
