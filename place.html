@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W03: Country Page - Bolivia (Cochabamba)</title>
+    <meta name="description" content="An informational portal about Cochabamba, Bolivia, developed for the WDD131 course assignment.">
+    <!-- Corrected relative paths to your subfolders -->
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Bolivia</h1>
+    </header>
+
+    <main>
+        <!-- Hero section using responsive srcset with WebP format -->
+        <div class="hero-container">
+            <picture>
+                <source media="(min-width: 800px)" srcset="images/hero-large.webp">
+                <img src="images/hero-small.webp" alt="Panoramic view of Cochabamba, Bolivia" class="hero-image">
+            </picture>
+        </div>
+
+        <!-- Country Data Section -->
+        <section class="data-card">
+            <h2>General Information</h2>
+            <ul>
+                <li><strong>Capital:</strong> Sucre (Constitutional) / La Paz (Seat of Gov.)</li>
+                <li><strong>Selected Region:</strong> Cochabamba</li>
+                <li><strong>Population:</strong> 12.5 Million (Bolivia)</li>
+                <li><strong>Language:</strong> Spanish, Quechua, Aymara</li>
+                <li><strong>Currency:</strong> Boliviano (BOB)</li>
+                <li><strong>Climate:</strong> Semi-arid / Valley climate</li>
+            </ul>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather-card">
+            <h2 class="weather-heading">Weather</h2>
+            
+            <!-- SVG Weather Icon - Visible only on mobile -->
+            <div class="weather-icon-mobile">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#d82a1b">
+                    <path d="M260-160q-91 0-155.5-63T40-377q0-79 49-138.5T216-587q27-86 99.5-139.5T483-780q109 0 188 71.5T756-534q68 8 116 57t48 117q0 75-52.5 127.5T740-180H260Zm0-60h480q50 0 85-35t35-85q0-50-35-85t-85-35h-46v-30q0-83-58.5-141.5T530-690q-83 0-141.5 58.5T330-490v20h-24q-65 0-110.5 45.5T150-314q0 65 45.5 110.5T260-220Z"/>
+                </svg>
+            </div>
+
+            <ul>
+                <li><strong>Temperature:</strong> <span id="temp">9</span> °C</li>
+                <li><strong>Condition:</strong> Partly Cloudy</li>
+                <li><strong>Wind:</strong> <span id="wind">12</span> km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="windchill"></span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Rich Kevin Panozo Vargas | Cochabamba, Bolivia</p>
+        <p class="last-modified">Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

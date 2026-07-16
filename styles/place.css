@@ -1,0 +1,134 @@
+/* Global CSS Variables */
+:root {
+    --primary-color: #0d5c3a;   /* Rich green from the flag */
+    --accent-color: #d82a1b;    /* High contrast red */
+    --gold-color: #f4b223;      /* Gold yellow */
+    --text-color: #202020;
+    --light-bg: #f9f9f9;
+    --white: #ffffff;
+    --font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 5px solid var(--gold-color);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.2rem;
+}
+
+.hero-container {
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.data-card, .weather-card {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top: 4px solid var(--accent-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.3rem;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+}
+
+ul li strong {
+    color: #333;
+}
+
+/* Mobile Weather Icon Control */
+.weather-icon-mobile {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    border-top: 5px solid var(--gold-color);
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+.last-modified {
+    color: var(--gold-color);
+    font-weight: bold;
+}
+
+/* --- Media Query for Larger View (800px and up) --- */
+@media (min-width: 800px) {
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        max-width: 1100px;
+        margin: 1.5rem auto;
+    }
+
+    .hero-container {
+        grid-column: 1 / -1;
+    }
+
+    /* Hide the mobile SVG icon in the larger view */
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    /* Pseudo-element to add the emoticon after "Weather" in desktop view only */
+    .weather-heading::after {
+        content: " ⛅";
+    }
+}
