@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temple Album | Rich Kevin Panozo Vargas</title>
+  <meta name="description" content="A dynamic and responsive web page displaying LDS Temples filtered by age and size. Developed for WDD 131.">
+  <meta name="author" content="Rich Kevin Panozo Vargas">
+  
+  <!-- CSS Stylesheet link -->
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  
+  <!-- JavaScript link -->
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="menu" aria-label="Toggle Navigation Menu"></button>
+    <nav>
+      <ul class="navigation">
+        <li><a href="#" id="home">Home</a></li>
+        <li><a href="#" id="old">Old</a></li>
+        <li><a href="#" id="new">New</a></li>
+        <li><a href="#" id="large">Large</a></li>
+        <li><a href="#" id="small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="filter-title">Home</h2>
+    <!-- Dynamic temple cards will be inserted here -->
+    <div id="temple-cards"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | Rich Kevin Panozo Vargas | Bolivia, Cochabamba</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
