@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <meta name="description" content="Confirmation page displaying total reviews completed using local storage.">
+    <meta name="author" content="Rich Kevin Panozo Vargas">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/form.css">
+    <!-- JavaScript -->
+    <script src="scripts/review.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Review!</h1>
+    </header>
+
+    <main class="confirmation-container">
+        <h2>Review Submitted Successfully</h2>
+        <p>Your feedback helps us improve our products and services.</p>
+        
+        <div class="counter-box">
+            <p>Total Reviews Completed on this Browser:</p>
+            <span id="reviewCount" class="count-display">0</span>
+        </div>
+
+        <a href="form.html" class="back-link">Submit Another Review</a>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Rich Kevin Panozo Vargas | Bolivia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
