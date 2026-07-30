@@ -1,0 +1,98 @@
+/* Palette and Typography Variables */
+:root {
+    --primary-color: #6B1D2F;   /* Deep Burgundy */
+    --secondary-color: #FDFBF7; /* Warm Beige */
+    --accent-color: #D4A373;    /* Golden Amber */
+    
+    --heading-font: 'Roboto', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--secondary-color);
+    color: #2b2b2b;
+    font-family: var(--body-font);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography Rules */
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* Header Section */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1, header h2 {
+    color: var(--secondary-color);
+    margin: 0.3rem 0;
+}
+
+/* Main Content Area */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed var(--accent-color);
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Links & Interactive Highlights */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Wireframe Images Formatting */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: 3rem;
+}
