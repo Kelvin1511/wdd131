@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cochabamba Travel Guide | Plan Your Visit</title>
+    <meta name="description" content="Request information or plan your upcoming trip to Cochabamba, Bolivia.">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>Cochabamba Guide</h1>
+        </div>
+        <button id="menu-btn" aria-label="Toggle Navigation">&#9776;</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">Attractions</a></li>
+                <li><a href="form.html" class="active">Plan Visit</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Plan Your Trip to Cochabamba</h2>
+            <form id="travel-form" method="get" action="form.html">
+                <div class="form-item">
+                    <label for="fullname">Full Name *</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="John Doe">
+                </div>
+
+                <div class="form-item">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+
+                <div class="form-item">
+                    <label for="travel-date">Planned Visit Date *</label>
+                    <input type="date" id="travel-date" name="travelDate" required>
+                </div>
+
+                <div class="form-item">
+                    <label for="interest">Primary Interest *</label>
+                    <select id="interest" name="interest" required>
+                        <option value="" disabled selected>Select an interest...</option>
+                        <option value="Gastronomy">Gastronomy & Food Tours</option>
+                        <option value="Historical Landmarks">Historical Landmarks</option>
+                        <option value="Nature & Hiking">Nature & Outdoor Activities</option>
+                        <option value="Culture & Festivals">Culture & Local Festivals</option>
+                    </select>
+                </div>
+
+                <fieldset class="form-item">
+                    <legend>Accommodation Preference</legend>
+                    <label><input type="radio" name="accommodation" value="Hotel" checked> Hotel</label>
+                    <label><input type="radio" name="accommodation" value="Hostel"> Hostel</label>
+                    <label><input type="radio" name="accommodation" value="Rental"> Vacation Rental</label>
+                </fieldset>
+
+                <div class="form-item">
+                    <label for="comments">Additional Questions or Requests</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Tell us more about your trip..."></textarea>
+                </div>
+
+                <button type="submit" class="btn">Submit Inquiry</button>
+            </form>
+            <div id="form-feedback" class="hidden"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Rich Kevin Panozo Vargas | Cochabamba, Bolivia</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References & Credits</a></p>
+    </footer>
+</body>
+</html>

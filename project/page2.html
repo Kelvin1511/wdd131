@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cochabamba Travel Guide | Attractions</title>
+    <meta name="description" content="Discover top tourist attractions in Cochabamba, Bolivia. Filter by category.">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>Cochabamba Guide</h1>
+        </div>
+        <button id="menu-btn" aria-label="Toggle Navigation">&#9776;</button>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html" class="active">Attractions</a></li>
+                <li><a href="form.html">Plan Visit</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filter-section">
+            <h2>Explore Top Attractions</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Monuments">Monuments</button>
+                <button class="filter-btn" data-filter="Nature">Nature</button>
+                <button class="filter-btn" data-filter="Culture">Culture</button>
+            </div>
+        </section>
+
+        <section id="attractions-grid" class="grid-cards">
+            <!-- Dynamic items rendered by JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Rich Kevin Panozo Vargas | Cochabamba, Bolivia</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References & Credits</a></p>
+    </footer>
+</body>
+</html>
